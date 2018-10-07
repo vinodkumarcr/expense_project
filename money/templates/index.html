@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <style media="screen">
+    .color{
+        background-color:#b7d5f0;
+        margin-top: 300px;
+    }
+    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <meta charset="utf-8">
+    <title>Home page</title>
+  </head>
+  <body style="background-color:#70b7f5;">
+    <div class=" jumbotron container text-center color" style="background-color:#b7d5f0">
+      <h2>Welcome to the Daily expenses App</h2>
+      <div class="">
+        <a href="{%url 'add'%}" class="btn btn-success btn-lg">
+            <span class="glyphicon glyphicon-plus-sign"></span> Add new expenses
+          </a>
+      </div>
+    </div>
+  </body>
+</html>
