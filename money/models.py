@@ -10,9 +10,9 @@ class Catagorie(models.Model):
 
 class Expense(models.Model):
     Catagory=models.ForeignKey(Catagorie,on_delete=models.CASCADE)
-    Date=models.DateTimeField(auto_now_add=False)
+    Date=models.DateField(auto_now_add=False)
     Money=models.DecimalField(max_digits=8,decimal_places=2)
-    Amount=models.DecimalField(max_digits=8,decimal_places=2)
+    Amount=models.DecimalField(max_digits=8,decimal_places=2,default=0)
     Place=models.CharField(max_length=100)
 
 
@@ -29,3 +29,21 @@ class Total(models.Model):
 
     def __str__(self):
         return str(self.Total_money)
+
+class Totals(models.Model):
+    Final_amount=models.DecimalField(max_digits=8,decimal_places=2)
+
+    def __str__(self):
+        return str(self.Final_amount)
+
+
+class Share(models.Model):
+    Catagory=models.ForeignKey(Catagorie,on_delete=models.CASCADE)
+    Date=models.DateField(auto_now_add=False)
+    Money=models.DecimalField(max_digits=8,decimal_places=2)
+    Count=models.IntegerField()
+    Place=models.CharField(max_length=20)
+
+
+    def __str__(self):
+        return self.Place

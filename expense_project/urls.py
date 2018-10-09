@@ -22,4 +22,7 @@ urlpatterns = [
     path('',views.index,name='home'),
     path('main/',views.main,name='list'),
     path('add/',views.add,name='add'),
+    path('reset/',views.reset,name='reset'),
+    path('sharing/',views.sharing,name='sharing'),
+    path('friend_share/',views.friend_share,name='friend_share'),
 ]
