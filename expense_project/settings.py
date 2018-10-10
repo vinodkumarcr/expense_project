@@ -25,7 +25,7 @@ SECRET_KEY = 'u&_(zi10wkpg*+c&%36&0u7_@&olp8q*a=%h)7pd_5pz8(qt*h'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1','localhost','https://vinod-expense-tracker.herokuapp.com/']
+ALLOWED_HOSTS = ['127.0.0.1','localhost','vinod-expense-tracker.herokuapp.com']
 
 
 # Application definition
