@@ -3,16 +3,19 @@
   <head>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css?family=Merienda" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Merienda" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Aclonica" rel="stylesheet">
     <title>add new expenses</title>
   </head>
   <body style="background-color:#e6e9eb;">
     <h4 class="text-right" style="margin-right:30px;"><a href="{%url 'list'%}"><strong> Go Back</strong></a></h4>
     <form method="POST" class="jumbotron text-center">
       <div class="">
-        <h2 style="color:Green">Enter The NEW Expenses</h2><small>Date Format:YY-MM-DD</small>
-        {{form.as_p}}
+        <h2 style="color:Green; font-family: 'Merienda', cursive;">Enter The NEW Expenses</h2><small>Date Format:YY-MM-DD</small>
+        <h4 style="font-family: 'Aclonica', sans-serif;"><small>{{form.as_p}}</small></h4>
         {%csrf_token%}
-        <input type="submit" name="submit" value="Submit">
+        <input type="submit" name="submit" value="Submit" style="font-family: 'Aclonica', sans-serif;">
       </div>
     </form>
   </body>

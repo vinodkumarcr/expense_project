@@ -28,22 +28,21 @@ def main(request):
     somes=list(some)
     totals=somes.pop()
     sharu=Share.objects.all()
-
+    ok1=0
     oh=Share.objects.all()
-    print(len(oh))
+    #print(len(oh))
     dictionary={'Tabs':Tabs,'totals':totals,'tota':tota,'share':sharu}
     if len(oh)!=0:
         hello=friend_share()
         #print(hello)
         #print(tota)
         tota+=hello[0]
-        print(tota)
-        my=hello[0]
-        my+=my
-        print(my)
+        #print(ok1)
+    else:
+        hello=(0,0)
 
-        di={'my_share':hello[0],'friends_share':hello[1],'tota':tota}
-        dictionary.update(di)
+    di={'my_share':hello[0],'friends_share':hello[1],'tota':tota}
+    dictionary.update(di)
 
 
 
@@ -79,6 +78,8 @@ def sharing(request):
     return render(request,'sharing.html',{'form':form})
 
 def friend_share():
+    addm=0
+    adds=0
     take=Share.objects.all()
     #print(take)
     for takes in take:
@@ -94,4 +95,8 @@ def friend_share():
             friends_share=0
             return (0,0)
 
-    return (y_share,friends_share)
+
+        addm+=y_share
+        adds+=friends_share
+
+    return (addm,adds)
