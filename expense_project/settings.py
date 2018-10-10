@@ -25,7 +25,7 @@ SECRET_KEY = 'u&_(zi10wkpg*+c&%36&0u7_@&olp8q*a=%h)7pd_5pz8(qt*h'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['https://vinod-expense-tracker.herokuapp.com/']
 
 
 # Application definition
@@ -121,6 +121,6 @@ USE_TZ = True
 STATICFILES_DIRS=[
             os.path.join(BASE_DIR, 'money/static'),
 ]
-STATIC_ROOT= os.path.join(BASE_DIR, 'static')
+STATIC_ROOT= os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = '/static/'
 STATICFILES_STORAGE = 'whitenoise.django.CompressedManifestStaticFilesStorage'
